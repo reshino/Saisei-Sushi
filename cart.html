@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+            <img src="image/logo.png" alt="saisei logo">
+        </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="order.html">Order</a></li>
+	<li class="dropdown">
+  	<a href="about.html">About Us</a>
+  	<ul class="dropdown-menu">
+    	<li><a href="chef.html">Our chefs</a></li>
+    	<li><a href="contact.html">Contact Us</a></li>
+    	<li><a href="careers.html">Careers</a></li>
+    	<li><a href="faqs.html">FAQs</a></li>
+  	</ul>
+	</li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="group.html">Group</a></li>
+	<li class="cart-logo">
+  	<a href="cart.html">
+    	<img src="image/cart.webp" alt="Cart" class="cart-icon">
+  	</a>
+	</li>
+	<li class="login-logo">
+  	<a href="login.html">
+    	<img src="image/user.png" alt="Login" class="login-icon">
+  	</a>
+	</li>
+        </ul>
+    </nav>
+
+<header>
+  <div class="banner-container">
+    <img src="image/banner.jpg" alt="sushi">
+    <div class="banner-text">
+      <h1 class="fade-in delay-1">Checkout</h1>
+    </div>
+  </div>
+</header>
+
+<header class="cart-header">
+  <h1>Your Cart</h1>
+</header>
+
+<div class="cart-container" id="cartContainer">
+  <!-- Cart items will appear here -->
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About / Summary -->
+    <div class="footer-about">
+      <h3>Saisei</h3>
+      <p>
+        An elegant sushi dining journey with fresh ingredients, 
+        artful presentation, and flavors crafted with passion.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="promotion.html">Promotion</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Socials -->
+    <div class="footer-socials">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/saisei668/" target="_blank"><img src="image/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>© 2026 Saisei. All rights reserved.</p>
+  </div>
+
+<div class="footer-disclaimer">
+  <p>
+    Disclaimer: All content on this website is developed for the purpose of learning XHTML & CSS only.
+  </p>
+</div>
+
+</footer>
+
+<script>
+const cartContainer = document.getElementById('cartContainer');
+let grandTotal = 0;
+let hasItems = false;
+
+// Loop through localStorage
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  const value = JSON.parse(localStorage.getItem(key));
+
+  if (value.qty > 0) {
+    hasItems = true;
+    const itemTotal = value.qty * value.price;
+    grandTotal += itemTotal;
+
+    const cartItem = document.createElement('div');
+    cartItem.className = 'cart-item';
+    cartItem.innerHTML = `
+      <div class="item-name">${key}</div>
+      <div class="item-qty">${value.qty}</div>
+      <div class="item-price">RM${value.price}</div>
+      <div class="item-total">RM${itemTotal}</div>
+    `;
+    cartContainer.appendChild(cartItem);
+  }
+}
+
+if (!hasItems) {
+  cartContainer.innerHTML = `<div class="empty-cart">Your cart is empty.</div>`;
+} else {
+  // Grand total
+  const totalDiv = document.createElement('div');
+  totalDiv.className = 'grand-total';
+  totalDiv.textContent = `Grand Total: RM${grandTotal}`;
+  cartContainer.appendChild(totalDiv);
+
+  // Checkout form with address
+  const form = document.createElement('form');
+  form.className = 'checkout-form';
+  form.innerHTML = `
+    <div class="form-left">
+      <h3>Payment Details</h3>
+      <input type="text" placeholder="Full Name" required>
+      <input type="text" placeholder="Card Number" required maxlength="16">
+      <div class="card-details">
+        <input type="text" placeholder="MM/YY" required>
+        <input type="text" placeholder="CVV" required maxlength="4">
+      </div>
+    </div>
+    <div class="form-right">
+      <h3>Shipping Address</h3>
+      <input type="text" placeholder="Street Address" required>
+      <input type="text" placeholder="City" required>
+      <input type="text" placeholder="Postal Code" required>
+      <input type="text" placeholder="Country" required>
+    </div>
+    <button type="submit">Checkout</button>
+  `;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Payment successful! Thank you for your order.');
+    localStorage.clear();
+    location.reload();
+  });
+
+  cartContainer.appendChild(form);
+}
+</script>
+
+</body>
+</html>
