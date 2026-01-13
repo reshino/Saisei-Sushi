@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+            <img src="image/logo.png" alt="saisei logo">
+        </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="order.html">Order</a></li>
+	<li class="dropdown">
+  	<a href="about.html">About Us</a>
+  	<ul class="dropdown-menu">
+    	<li><a href="chef.html">Our chefs</a></li>
+    	<li><a href="contact.html">Contact Us</a></li>
+    	<li><a href="careers.html">Careers</a></li>
+    	<li><a href="faqs.html">FAQs</a></li>
+  	</ul>
+	</li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="group.html">Group</a></li>
+	<li class="cart-logo">
+  	<a href="cart.html">
+    	<img src="image/cart.webp" alt="Cart" class="cart-icon">
+  	</a>
+	</li>
+	<li class="login-logo">
+  	<a href="login.html">
+    	<img src="image/user.png" alt="Login" class="login-icon">
+  	</a>
+	</li>
+        </ul>
+    </nav>
+
+<header>
+  <div class="banner-container">
+    <img src="image/banner.jpg" alt="sushi">
+    <div class="banner-text">
+      <h1 class="fade-in delay-1">Location</h1>
+    </div>
+  </div>
+</header>
+
+<section class="location-section fade-on-scroll">
+  <h2 class="fade-on-scroll">Visit Us</h2>
+  <p class="location-subtitle fade-on-scroll">Come enjoy our sushi at our Penang branch in George Town! We’re open daily except Sundays to serve you fresh Japanese dishes made with perfection. </p>
+
+  <div class="map-container fade-on-scroll">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37788.201887481366!2d100.29948610060445!3d5.417661158072278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!	1s0x304ac397ad2b7bd5%3A0x239ae45978a9b934!2sGeorge%20Town%2C%20Penang!5e0!3m2!1sen!2smy!4v1768322478877!5m2!1sen!2smy"
+	width="600"
+	height="450"
+	style="border:0;"
+	allowfullscreen=""
+	loading="lazy"
+	referrerpolicy="no-referrer-when-downgrade">
+	</iframe>
+      </div>
+    </section>
+
+<section class="contact-info fade-on-scroll">
+  <div class="info-item">
+    <img src="image/location.webp" alt="Location Icon">
+    <p>George Town, Penang, Malaysia</p>
+  </div>
+
+  <div class="info-item">
+    <img src="image/clock.png" alt="Clock Icon">
+    <p>Open every day except Sunday: 01.00 PM – 02.00 AM</p>
+  </div>
+
+  <div class="info-item">
+    <img src="image/phone.png" alt="Phone Icon">
+    <p>012-3456789</p>
+  </div>
+
+  <div class="info-item">
+    <img src="image/email.png" alt="Email Icon">
+    <p>saiseisushi@gmail.com</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About / Summary -->
+    <div class="footer-about">
+      <h3>Saisei</h3>
+      <p>
+        An elegant sushi dining journey with fresh ingredients, 
+        artful presentation, and flavors crafted with passion.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="promotion.html">Promotion</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Socials -->
+    <div class="footer-socials">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/saisei668/" target="_blank"><img src="image/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>© 2026 Saisei. All rights reserved.</p>
+  </div>
+
+<div class="footer-disclaimer">
+  <p>
+    Disclaimer: All content on this website is developed for the purpose of learning XHTML & CSS only.
+  </p>
+</div>
+
+</footer>
+
+<script>
+const fadeElements = document.querySelectorAll('.fade-on-scroll');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+fadeElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

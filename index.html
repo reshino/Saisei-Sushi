@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+            <img src="image/logo.png" alt="saisei logo">
+        </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="order.html">Order</a></li>
+	<li class="dropdown">
+  	<a href="about.html">About Us</a>
+  	<ul class="dropdown-menu">
+    	<li><a href="chef.html">Our chefs</a></li>
+    	<li><a href="contact.html">Contact Us</a></li>
+    	<li><a href="careers.html">Careers</a></li>
+    	<li><a href="faqs.html">FAQs</a></li>
+  	</ul>
+	</li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="group.html">Group</a></li>
+	<li class="cart-logo">
+  	<a href="cart.html">
+    	<img src="image/cart.webp" alt="Cart" class="cart-icon">
+  	</a>
+	</li>
+	<li class="login-logo">
+  	<a href="login.html">
+    	<img src="image/user.png" alt="Login" class="login-icon">
+  	</a>
+	</li>
+        </ul>
+    </nav>
+
+<header>
+  <div class="banner-container">
+    <img src="image/banner.jpg" alt="sushi">
+    <div class="banner-text">
+      <h1 class="fade-in delay-1">Precision in Every Piece</h1>
+      <p class="fade-in delay-2">Experience the pure taste of freshness like no others</p>
+      <a href="menu.html" class="pill-button story-btn fade-in delay-3">Explore Our Menu</a>
+    </div>
+  </div>
+</header>
+
+<section class="story-section">
+  <div class="story-container">
+
+    <!-- Left content -->
+    <div class="story-text">
+      <h2 class="fade-in-scroll">Every Plate We Serve, We Serve with Heart</h2>
+
+      <p>
+	It began with a small kitchen, a handful of fresh ingredients, and a deep respect for the craft of sushi. What started as a quiet passion soon became a place where people gathered 	to enjoy carefully prepared dishes.
+      </p>
+
+      <p>
+        With only a few restaurants available across Malaysia, we continue
+        to serve fresh, carefully prepared favourites that bring people together.
+      </p>
+
+      <p class="highlight">
+        We’re more than sushi — we’re where the good times roll.
+      </p>
+
+      <a href="about.html" class="story-btn">Learn More</a>
+    </div>
+
+    <!-- Right images -->
+    <div class="story-images">
+      <img src="image/promotion1.jpg" alt="Family dining" class="img-up">
+      <img src="image/promotion2.jpg" alt="Conveyor sushi" class="img-down">
+    </div>
+
+  </div>
+</section>
+
+<section class="reservation-section">
+  <div class="reservation-container">
+      <h2 class="fade-in-scroll">Reserve Your Table</h2>
+
+      <div class="reservation-icons">
+          <div class="icon-slide-up icon-item">
+              <img src="image/fish.webp" alt="Fish icon" class="reservation-line">
+              <p>A Place for Everyone</p>
+          </div>
+          <div class="icon-slide-up icon-item">
+              <img src="image/sushi.webp" alt="Sushi icon" class="reservation-line">
+              <p>Tasteful Variety</p>
+          </div>
+          <div class="icon-slide-up icon-item">
+              <img src="image/health.webp" alt="Health icon" class="reservation-line">
+              <p>A Healthier Pick</p>
+          </div>
+      </div>
+
+    <a href="reservation.html" class="pill-button">Reserve Now</a>
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About / Summary -->
+    <div class="footer-about">
+      <h3>Saisei</h3>
+      <p>
+        An elegant sushi dining journey with fresh ingredients, 
+        artful presentation, and flavors crafted with passion.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="promotion.html">Promotion</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Socials -->
+    <div class="footer-socials">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/saisei668/" target="_blank"><img src="image/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>© 2026 Saisei. All rights reserved.</p>
+  </div>
+
+<div class="footer-disclaimer">
+  <p>
+    Disclaimer: All content on this website is developed for the purpose of learning XHTML & CSS only.
+  </p>
+</div>
+
+</footer>
+
+<script>
+window.addEventListener("scroll", () => {
+    const scrolled = window.scrollY;
+
+    document.querySelector(".img-up").style.transform =
+        `translateY(${-scrolled * 0.1}px)`;
+
+    document.querySelector(".img-down").style.transform =
+        `translateY(${scrolled * 0.1}px)`;
+});
+</script>
+
+<script>
+const faders = document.querySelectorAll('.fade-in-scroll');
+
+const appearOptions = {
+    threshold: 0.1,  // 10% of the element visible
+    rootMargin: "0px 0px -50px 0px"  // trigger slightly before element fully in view
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // fade-in only once
+        }
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+</script>
+
+<script>
+const icons = document.querySelectorAll('.icon-slide-up');
+
+const iconObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            // stagger effect
+            icons.forEach((icon, index) => {
+                setTimeout(() => {
+                    icon.classList.add('visible');
+                }, index * 300); // 300ms delay between icons
+            });
+            iconObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+icons.forEach(icon => iconObserver.observe(icon));
+</script>
+
+</body>
+</html>

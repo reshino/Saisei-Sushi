@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+            <img src="image/logo.png" alt="saisei logo">
+        </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="order.html">Order</a></li>
+	<li class="dropdown">
+  	<a href="about.html">About Us</a>
+  	<ul class="dropdown-menu">
+    	<li><a href="chef.html">Our chefs</a></li>
+    	<li><a href="contact.html">Contact Us</a></li>
+    	<li><a href="careers.html">Careers</a></li>
+    	<li><a href="faqs.html">FAQs</a></li>
+  	</ul>
+	</li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="group.html">Group</a></li>
+	<li class="cart-logo">
+  	<a href="cart.html">
+    	<img src="image/cart.webp" alt="Cart" class="cart-icon">
+  	</a>
+	</li>
+	<li class="login-logo">
+  	<a href="login.html">
+    	<img src="image/user.png" alt="Login" class="login-icon">
+  	</a>
+	</li>
+        </ul>
+    </nav>
+
+<header>
+  <div class="banner-container">
+    <img src="image/banner.jpg" alt="sushi">
+    <div class="banner-text">
+      <h1 class="fade-in delay-1">Gallery</h1>
+    </div>
+  </div>
+</header>
+
+<section class="gallery-section">
+  <h2 class="gallery-title">Our Moments at Saisei</h2>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-card fade-on-scroll left">
+      <img src="image/gallery1.jpg" alt="Gallery 1">
+      <p class="gallery-text">Fresh sushi prepared daily with care and precision.</p>
+    </div>
+
+    <div class="gallery-card fade-on-scroll right">
+      <img src="image/gallery2.jpg" alt="Gallery 2">
+      <p class="gallery-text">Perfect for sharing with friends, family, or anyone who loves delicious bites together.</p>
+    </div>
+
+    <div class="gallery-card fade-on-scroll left">
+      <img src="image/gallery3.jpg" alt="Gallery 3">
+      <p class="gallery-text">High-quality ingredients, sourced fresh daily for our dishes.</p>
+    </div>
+
+    <div class="gallery-card fade-on-scroll right">
+      <img src="image/gallery4.jpg" alt="Gallery 4">
+      <p class="gallery-text">Our chefs putting passion into every plate they create.</p>
+    </div>
+
+    <div class="gallery-card fade-on-scroll left">
+      <img src="image/gallery5.jpg" alt="Gallery 5">
+      <p class="gallery-text">Indulge in sushi crafted to perfection in a sophisticated environment.</p>
+    </div>
+
+    <div class="gallery-card fade-on-scroll right">
+      <img src="image/gallery6.jpg" alt="Gallery 6">
+      <p class="gallery-text">Learn by doing—hands-on training available right here.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About / Summary -->
+    <div class="footer-about">
+      <h3>Saisei</h3>
+      <p>
+        An elegant sushi dining journey with fresh ingredients, 
+        artful presentation, and flavors crafted with passion.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="promotion.html">Promotion</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Socials -->
+    <div class="footer-socials">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/saisei668/" target="_blank"><img src="image/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>© 2026 Saisei. All rights reserved.</p>
+  </div>
+
+<div class="footer-disclaimer">
+  <p>
+    Disclaimer: All content on this website is developed for the purpose of learning XHTML & CSS only.
+  </p>
+</div>
+
+</footer>
+
+<script>
+const fadeElements = document.querySelectorAll('.fade-on-scroll');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible'); // optional: fade out when scrolling up
+      }
+    });
+  },
+  { threshold: 0.1 } // triggers when 10% of element is visible
+);
+
+fadeElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

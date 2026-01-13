@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+            <img src="image/logo.png" alt="saisei logo">
+        </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="order.html">Order</a></li>
+	<li class="dropdown">
+  	<a href="about.html">About Us</a>
+  	<ul class="dropdown-menu">
+    	<li><a href="chef.html">Our chefs</a></li>
+    	<li><a href="contact.html">Contact Us</a></li>
+    	<li><a href="careers.html">Careers</a></li>
+    	<li><a href="faqs.html">FAQs</a></li>
+  	</ul>
+	</li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="group.html">Group</a></li>
+	<li class="cart-logo">
+  	<a href="cart.html">
+    	<img src="image/cart.webp" alt="Cart" class="cart-icon">
+  	</a>
+	</li>
+	<li class="login-logo">
+  	<a href="login.html">
+    	<img src="image/user.png" alt="Login" class="login-icon">
+  	</a>
+	</li>
+        </ul>
+    </nav>
+
+<header>
+  <div class="banner-container">
+    <img src="image/banner.jpg" alt="sushi">
+    <div class="banner-text">
+      <h1 class="fade-in delay-1">Limited-Time Highlights</h1>
+    </div>
+  </div>
+</header>
+
+<section class="promo-section">
+  <h2 class="promo-title">Current Promotions</h2>
+
+  <div class="promo-grid">
+    <div class="promo-card fade-on-scroll">
+      <img src="image/Web-Thumbnail.jpg" alt="Promotion 1">
+  <h3>More to Satisfy : All-Day Value Meals</h3>
+      <p class="promo-text">More to Satisfy : All-Day Value Meals Looking for a...</p>
+    </div>
+
+    <div class="promo-card fade-on-scroll">
+      <img src="image/Web-thumbnail-2.jpg" alt="Promotion 2">
+  <h3>Fuel Your Day the Delicious Way!</h3>
+      <p class="promo-text">Fuel Your Day the Delicious Way! Available for a limited...</p>
+    </div>
+
+    <div class="promo-card fade-on-scroll">
+      <img src="image/Web-Thumbnail-3.jpg" alt="Promotion 3">
+  <h3>Happy Hour</h3>
+      <p class="promo-text">Happy Hour *Term & condition apply Exclusively for members, available...</p>
+    </div>
+  </div>
+
+  <p class="promo-terms fade-on-scroll">
+    *Terms & Conditions apply. Promotions are valid for a limited time only and while stocks last.
+  </p>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About / Summary -->
+    <div class="footer-about">
+      <h3>Saisei</h3>
+      <p>
+        An elegant sushi dining journey with fresh ingredients, 
+        artful presentation, and flavors crafted with passion.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="promotion.html">Promotion</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Socials -->
+    <div class="footer-socials">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/saisei668/" target="_blank"><img src="image/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>© 2026 Saisei. All rights reserved.</p>
+  </div>
+
+<div class="footer-disclaimer">
+  <p>
+    Disclaimer: All content on this website is developed for the purpose of learning XHTML & CSS only.
+  </p>
+</div>
+
+</footer>
+
+<script>
+const fadeElements = document.querySelectorAll('.fade-on-scroll');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+fadeElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

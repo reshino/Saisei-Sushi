@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+            <img src="image/logo.png" alt="saisei logo">
+        </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="order.html">Order</a></li>
+	<li class="dropdown">
+  	<a href="about.html">About Us</a>
+  	<ul class="dropdown-menu">
+    	<li><a href="chef.html">Our chefs</a></li>
+    	<li><a href="contact.html">Contact Us</a></li>
+    	<li><a href="careers.html">Careers</a></li>
+    	<li><a href="faqs.html">FAQs</a></li>
+  	</ul>
+	</li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="group.html">Group</a></li>
+	<li class="cart-logo">
+  	<a href="cart.html">
+    	<img src="image/cart.webp" alt="Cart" class="cart-icon">
+  	</a>
+	</li>
+	<li class="login-logo">
+  	<a href="login.html">
+    	<img src="image/user.png" alt="Login" class="login-icon">
+  	</a>
+	</li>
+        </ul>
+    </nav>
+
+<header>
+  <div class="banner-container">
+    <img src="image/banner.jpg" alt="sushi">
+    <div class="banner-text">
+      <h1 class="fade-in delay-1">Our Team</h1>
+    </div>
+  </div>
+</header>
+
+<section class="group-section">
+  <h2 class="group-title">Group Assignment</h2>
+
+  <div class="group-grid">
+
+    <!-- Member 1 -->
+    <div class="group-card fade-on-scroll">
+      <img src="image/adam.jpg" alt="Adam" class="group-avatar">
+
+      <div class="group-info">
+        <p><strong>Name:</strong> Adam Akhtar Bin Syahnaz Akhtar</p>
+        <p><strong>Student ID:</strong> 2024945441</p>
+        <p><strong>Group:</strong> KCDIM144 4A</p>
+        <p><strong>Course Code:</strong> IML254</p>
+        <p><strong>Course Name:</strong> Introduction to Web Content Development</p>
+        <p><strong>Faculty:</strong> Faculty of Science Information</p>
+        <p><strong>Submission Date:</strong> 14 January 2026</p>
+      </div>
+    </div>
+
+    <!-- Member 2 -->
+    <div class="group-card fade-on-scroll">
+      <img src="image/rais.jpeg" alt="Rais" class="group-avatar">
+
+      <div class="group-info">
+        <p><strong>Name:</strong> Pengiran Rais Hakimi Bin Ag Mohd Taib</p>
+        <p><strong>Student ID:</strong> 2024945231</p>
+        <p><strong>Group:</strong> KCDIM144 4A</p>
+        <p><strong>Course Code:</strong> IML254</p>
+        <p><strong>Course Name:</strong> Introduction to Web Content Development</p>
+        <p><strong>Faculty:</strong> Faculty of Science Information</p>
+        <p><strong>Submission Date:</strong> 14 January 2026</p>
+      </div>
+    </div>
+
+    <!-- Member 3 -->
+    <div class="group-card fade-on-scroll">
+      <img src="image/hakim.jpg" alt="Hakim" class="group-avatar">
+
+      <div class="group-info">
+        <p><strong>Name:</strong> Abdul Hakim Bin Alhamri</p>
+        <p><strong>Student ID:</strong> 2024789533</p>
+        <p><strong>Group:</strong> KCDIM144 4A</p>
+        <p><strong>Course Code:</strong> IML254</p>
+        <p><strong>Course Name:</strong> Introduction to Web Content Development</p>
+        <p><strong>Faculty:</strong> Faculty of Science Information</p>
+        <p><strong>Submission Date:</strong> 14 January 2026</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About / Summary -->
+    <div class="footer-about">
+      <h3>Saisei</h3>
+      <p>
+        An elegant sushi dining journey with fresh ingredients, 
+        artful presentation, and flavors crafted with passion.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="promotion.html">Promotion</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Socials -->
+    <div class="footer-socials">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/saisei668/" target="_blank"><img src="image/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>© 2026 Saisei. All rights reserved.</p>
+  </div>
+
+<div class="footer-disclaimer">
+  <p>
+    Disclaimer: All content on this website is developed for the purpose of learning XHTML & CSS only.
+  </p>
+</div>
+
+</footer>
+
+<script>
+const fadeElements = document.querySelectorAll('.fade-on-scroll');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+fadeElements.forEach(el => observer.observe(el));
+</script>
+

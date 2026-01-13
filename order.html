@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+            <img src="image/logo.png" alt="saisei logo">
+        </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="order.html">Order</a></li>
+	<li class="dropdown">
+  	<a href="about.html">About Us</a>
+  	<ul class="dropdown-menu">
+    	<li><a href="chef.html">Our chefs</a></li>
+    	<li><a href="contact.html">Contact Us</a></li>
+    	<li><a href="careers.html">Careers</a></li>
+    	<li><a href="faqs.html">FAQs</a></li>
+  	</ul>
+	</li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="group.html">Group</a></li>
+	<li class="cart-logo">
+  	<a href="cart.html">
+    	<img src="image/cart.webp" alt="Cart" class="cart-icon">
+  	</a>
+	</li>
+	<li class="login-logo">
+  	<a href="login.html">
+    	<img src="image/user.png" alt="Login" class="login-icon">
+  	</a>
+	</li>
+        </ul>
+    </nav>
+
+<header>
+  <div class="banner-container">
+    <img src="image/banner.jpg" alt="sushi">
+    <div class="banner-text">
+      <h1 class="fade-in delay-1">Order Here</h1>
+    </div>
+  </div>
+</header>
+
+<section class="menu-scroll-section">
+
+  <div class="menu-wrapper">
+    <!-- Left arrow -->
+    <button class="side-arrow" id="leftBtn">‹</button>
+
+<div class="menu-display">
+  <div class="menu-item" data-category="cat1">
+    <img src="image/Salmon-Sashimi-edged-out.webp" class="active">
+    <p class="image-label">Salmon Sashimi</p>
+  </div>
+  <div class="menu-item" data-category="cat2">
+    <img src="image/special-sushi.webp">
+    <p class="image-label">Special Sushi</p>
+  </div>
+  <div class="menu-item" data-category="cat3">
+    <img src="image/seafood.webp">
+    <p class="image-label">Seafood</p>
+  </div>
+  <div class="menu-item" data-category="cat4">
+    <img src="image/kids-meal.webp">
+    <p class="image-label">Kids Meal</p>
+  </div>
+  <div class="menu-item" data-category="cat5">
+    <img src="image/beverages.webp">
+    <p class="image-label">Beverages</p>
+  </div>
+  <div class="menu-item" data-category="cat6">
+    <img src="image/deserts.webp">
+    <p class="image-label">Deserts</p>
+  </div>
+</div>
+
+    <!-- Right arrow -->
+    <button class="side-arrow" id="rightBtn">›</button>
+  </div>
+
+  <div class="category-display">
+
+    <div class="category cat1">
+     <div class="sub-item">
+      <img src="image/Maguro-Sashimi.jpg">
+    <p class="sub-label">Maguro Sashimi</p>
+  <p class="price" data-price="18">RM18</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Sashimi-Moriawase.jpg">
+    <p class="sub-label">Sashimi Moriawase</p>
+  <p class="price" data-price="16">RM16</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Sashimi-Salmon-Belly.jpg">
+    <p class="sub-label">Salmon Belly Sashimi</p>
+  <p class="price" data-price="15">RM15</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Spicy-Salmon-Carpaccio.jpg">
+    <p class="sub-label">Spicy Salmon Carpaccio</p>
+  <p class="price" data-price="16">RM16</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Tamago-Tsumami.jpg">
+    <p class="sub-label">Tamago Tsumami</p>
+  <p class="price" data-price="18">RM18</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+</div>
+
+    <div class="category cat2">
+     <div class="sub-item">
+      <img src="image/Special-Sushi-Salmon-Cheese-Roll.jpg">
+    <p class="sub-label">Salmon Cheese Roll</p>
+  <p class="price" data-price="22">RM22</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Special-Sushi-Soft-Shell-Crab-Roll.jpg">
+    <p class="sub-label">Soft Shell Crab Roll</p>
+  <p class="price" data-price="23">RM23</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Special-Sushi-Double-Cheese-Ebi-Ten-Roll.jpg">
+    <p class="sub-label">Double Cheese Ebi Ten Roll</p>
+  <p class="price" data-price="27">RM27</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Special-Sushi-Rainbow-Roll.jpg">
+    <p class="sub-label">Rainbow Roll</p>
+  <p class="price" data-price="25">RM25</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+</div>
+
+    <div class="category cat3">
+     <div class="sub-item">
+      <img src="image/Seafood-Unagi-Kabayaki.jpg">
+    <p class="sub-label">Unagi Kabayaki</p>
+  <p class="price" data-price="28">RM28</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Seafood-Saba-Teriyaki.jpg">
+    <p class="sub-label">Saba Teriyaki</p>
+  <p class="price" data-price="25">RM25</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Seafood-Karei-Teriyaki.jpg">
+    <p class="sub-label">Karei Teriyaki</p>
+  <p class="price" data-price="22">RM22</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Seafood-Saba-Mentai-Yaki.jpg">
+    <p class="sub-label">Saba Mentai Yaki</p>
+  <p class="price" data-price="20">RM20</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+</div>
+
+    <div class="category cat4">
+     <div class="sub-item">
+      <img src="image/Kids-Meal-Kids-Mixed-Set.jpg">
+    <p class="sub-label">Kids Mixed Set</p>
+  <p class="price" data-price="10">RM10</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Kids-Meal-Kids-Sushi-Set.jpg">
+    <p class="sub-label">Kids Sushi Set</p>
+  <p class="price" data-price="8">RM8</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Kids-Meal-Kids-Udon-Set.jpg">
+    <p class="sub-label">Kids Udon Set</p>
+  <p class="price" data-price="9">RM9</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+</div>
+
+    <div class="category cat5">
+     <div class="sub-item">
+      <img src="image/Beverages-Ice-Matcha.jpg">
+    <p class="sub-label">Ice Matcha</p>
+  <p class="price" data-price="19">RM19</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Beverages-Berry-Yogurt-Float.jpg">
+    <p class="sub-label">Berry Yogurt Float</p>
+  <p class="price" data-price="17">RM17</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Beverages-Cola-Float.jpg">
+    <p class="sub-label">Cola Float</p>
+  <p class="price" data-price="10">RM10</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Beverages-Ice-Honey-Lemon-Tea.jpg">
+    <p class="sub-label">Ice Honey Lemon Tea</p>
+  <p class="price" data-price="15">RM15</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Beverages-Milo-Dinosaur.jpg">
+    <p class="sub-label">Milo Dinosaur</p>
+  <p class="price" data-price="14">RM14</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Beverages-Orange-Juice.jpg">
+    <p class="sub-label">Orange Juice</p>
+  <p class="price" data-price="13">RM13</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Coke.webp">
+    <p class="sub-label">Coca-Cola</p>
+  <p class="price" data-price="5">RM5</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Sprite.webp">
+    <p class="sub-label">Sprite</p>
+  <p class="price" data-price="5">RM5</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+</div>
+
+    <div class="category cat6">
+     <div class="sub-item">
+      <img src="image/Desserts-Lava-Cake-Ice-Cream.jpg">
+    <p class="sub-label">Lava Cake & Ice Cream</p>
+  <p class="price" data-price="18">RM18</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Desserts-Matcha-Ice-Cream.jpg">
+    <p class="sub-label">Matcha Ice Cream</p>
+  <p class="price" data-price="15">RM15</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Hanjuku-Cheese-cake_edgeout.webp">
+    <p class="sub-label">Hanjuku Cheese Cake</p>
+  <p class="price" data-price="8">RM8</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+     <div class="sub-item">
+      <img src="image/Desserts-Durian-Mochi-Ice-Cream.jpg">
+    <p class="sub-label">Durian Mochi & Ice Cream</p>
+  <p class="price" data-price="12">RM12</p>
+  <div class="quantity-controls">
+    <button class="minus">−</button>
+    <span class="qty">0</span>
+    <button class="plus">+</button>
+  </div>
+  </div>
+</div>
+
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About / Summary -->
+    <div class="footer-about">
+      <h3>Saisei</h3>
+      <p>
+        An elegant sushi dining journey with fresh ingredients, 
+        artful presentation, and flavors crafted with passion.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="promotion.html">Promotion</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-socials">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/saisei668/" target="_blank"><img src="image/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Saisei. All rights reserved.</p>
+  </div>
+
+<div class="footer-disclaimer">
+  <p>
+    Disclaimer: All content on this website is developed for the purpose of learning XHTML & CSS only.
+  </p>
+</div>
+
+</footer>
+
+<script>
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
+const menuItems = document.querySelectorAll('.menu-item');
+const categories = document.querySelectorAll('.category');
+const subImages = document.querySelectorAll('.sub-item img');
+
+let currentIndex = 0;
+
+function updateActiveImage() {
+  menuItems.forEach((item, index) => {
+    const img = item.querySelector('img');
+    img.classList.toggle('active', index === currentIndex);
+  });
+
+  categories.forEach(cat => {
+    cat.classList.remove('active');
+    // remove visible class from all images first
+    const imgs = cat.querySelectorAll('.sub-item img');
+    imgs.forEach(i => i.classList.remove('visible'));
+  });
+
+  const activeCategory = menuItems[currentIndex].dataset.category;
+  const catDiv = document.querySelector(`.category.${activeCategory}`);
+  catDiv.classList.add('active');
+
+  const imgs = catDiv.querySelectorAll('.sub-item img');
+  imgs.forEach((img, idx) => {
+    setTimeout(() => img.classList.add('visible'), idx * 200); // stagger effect
+  });
+}
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // only animate once
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+subImages.forEach(img => observer.observe(img));
+
+leftBtn.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex < 0) currentIndex = menuItems.length - 1;
+    updateActiveImage();
+});
+
+rightBtn.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex >= menuItems.length) currentIndex = 0;
+    updateActiveImage();
+});
+
+menuItems.forEach((item, index) => {
+    item.querySelector('img').addEventListener('click', () => {
+        currentIndex = index;
+        updateActiveImage();
+    });
+});
+
+updateActiveImage();
+
+const subItems = document.querySelectorAll('.sub-item');
+
+subItems.forEach(item => {
+  const minusBtn = item.querySelector('.minus');
+  const plusBtn = item.querySelector('.plus');
+  const qtySpan = item.querySelector('.qty');
+  const itemName = item.querySelector('.sub-label').textContent; // item name
+  const price = parseFloat(item.querySelector('.price').dataset.price); // price as number
+
+  function saveToLocalStorage() {
+    const qty = parseInt(qtySpan.textContent);
+    const itemData = { qty, price }; // store both quantity and price
+    localStorage.setItem(itemName, JSON.stringify(itemData)); // save as JSON
+  }
+
+  minusBtn.addEventListener('click', () => {
+    let qty = parseInt(qtySpan.textContent);
+    if (qty > 0) qty--;
+    qtySpan.textContent = qty;
+    saveToLocalStorage(); // update localStorage
+  });
+
+  plusBtn.addEventListener('click', () => {
+    let qty = parseInt(qtySpan.textContent);
+    qty++;
+    qtySpan.textContent = qty;
+    saveToLocalStorage(); // update localStorage
+  });
+});
+
+</script>
+
+
+</body>
+</html>
